@@ -23,7 +23,7 @@ if [ ! -f "currency_service.py" ]; then
 fi
 
 # Run the Python script
-python currency_service.py
+python -B currency_service.py
 
 # Deactivate virtual environment upon script completion (optional, good practice)
 # echo "Deactivating virtual environment."

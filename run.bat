@@ -22,7 +22,7 @@ if not exist "currency_service.py" (
 )
 
 REM Run the Python script
-python currency_service.py
+python -B currency_service.py
 
 REM Deactivate virtual environment (optional, good practice for consistency)
 REM echo Deactivating virtual environment.
