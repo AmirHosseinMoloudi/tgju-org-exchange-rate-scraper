@@ -14,15 +14,18 @@ REM Activate virtual environment
 echo Activating virtual environment...
 call "%VENV_DIR%\Scripts\activate.bat"
 
-REM Check if the main script exists
-if not exist "currency_service.py" (
-    echo Error: Main script 'currency_service.py' not found.
+REM Check if the main script exists in its new location
+if not exist "src\tgju\currency_service.py" (
+    echo Error: Main script 'src\tgju\currency_service.py' not found.
     call "%VENV_DIR%\Scripts\deactivate.bat"
     goto :eof
 )
 
-REM Run the Python script
-python -B currency_service.py
+echo Setting PYTHONPATH to include src directory
+set "PYTHONPATH=.\src;%PYTHONPATH%"
+
+echo Running the application...
+python -B src\tgju\currency_service.py
 
 REM Deactivate virtual environment (optional, good practice for consistency)
 REM echo Deactivating virtual environment.

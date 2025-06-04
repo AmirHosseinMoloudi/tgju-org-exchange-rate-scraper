@@ -15,15 +15,15 @@ fi
 source "$VENV_DIR/bin/activate"
 echo "Virtual environment activated."
 
-# Check if the main script exists
-if [ ! -f "currency_service.py" ]; then
-    echo "Error: Main script 'currency_service.py' not found."
+# Check if the main script exists in its new location
+if [ ! -f "src/tgju/currency_service.py" ]; then
+    echo "Error: Main script 'src/tgju/currency_service.py' not found."
     deactivate
     exit 1
 fi
 
-# Run the Python script
-python -B currency_service.py
+# Run the Python script from its new location, ensuring src is in PYTHONPATH
+PYTHONPATH=./src:$PYTHONPATH python -B src/tgju/currency_service.py
 
 # Deactivate virtual environment upon script completion (optional, good practice)
 # echo "Deactivating virtual environment."
