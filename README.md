@@ -1,3 +1,6 @@
+https://pypi.org/project/tgju/
+[![PyPI version](https://img.shields.io/pypi/v/tgju.svg)](https://pypi.org/project/tgju/)
+
 # TGJU Currency Price Fetcher
 
 The `tgju` Python package provides an asynchronous client to fetch live prices of specified currencies and other assets by querying an external API (tgju.org). It is built using `httpx` for non-blocking API calls and `asyncio` for managing asynchronous operations.
