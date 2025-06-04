@@ -33,10 +33,10 @@ dependencies = [
 ]
 
 [project.urls]
-# Homepage = "https://github.com/YOUR_USERNAME/YOUR_REPO" # User will need to update this
-# Issues = "https://github.com/YOUR_USERNAME/YOUR_REPO/issues" # User will need to update this
-"Source Code" = "https://github.com/ahmoloudi/tgju" # Assuming this is the repo, can be changed by user
-"Bug Tracker" = "https://github.com/ahmoloudi/tgju/issues" # Assuming
+# Homepage = "https://github.com/AmirHosseinMoloudi/tgju-org-exchange-rate-scraper"
+# Issues = "https://github.com/AmirHosseinMoloudi/tgju-org-exchange-rate-scraper/issues"
+"Source Code" = "https://github.com/AmirHosseinMoloudi/tgju-org-exchange-rate-scraper"
+"Bug Tracker" = "https://github.com/AmirHosseinMoloudi/tgju-org-exchange-rate-scraper/issues"
 
 [project.optional-dependencies]
 test = [
