@@ -33,3 +33,4 @@ REM call "%VENV_DIR%\Scripts\deactivate.bat"
 REM Similar to the .sh script, deactivation is implicitly handled when the script ends.
 
 echo Application finished.
+pause

@@ -33,3 +33,5 @@ PYTHONPATH=./src:$PYTHONPATH python -B src/tgju/currency_service.py
 # However, if the script were more complex or interactive, it might be useful.
 
 echo "Application finished."
+
+read -p "Press [Enter] key to exit..."
