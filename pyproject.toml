@@ -1,0 +1,80 @@
+[build-system]
+requires = ["hatchling>=1.11.0"]  # Specify a version of Hatchling that supports PEP 639 license files
+build-backend = "hatchling.build"
+
+[project]
+name = "tgju"
+version = "0.0.1b0" # Using b0 for beta as per PEP 440
+authors = [
+  { name="AmirHosseinMoloudi", email="ahmoloudi786@gmail.com" },
+]
+description = "A Python client for fetching live currency and asset prices from the TGJU API."
+readme = "README.md"
+requires-python = ">=3.8" # Considering async/await, httpx, and modern typing
+license = { file = "LICENSE" } # PEP 639 for license file
+keywords = ["tgju", "currency", "api", "finance", "exchange rates", "rial", "iran"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "httpx>=0.20",
+]
+
+[project.urls]
+# Homepage = "https://github.com/YOUR_USERNAME/YOUR_REPO" # User will need to update this
+# Issues = "https://github.com/YOUR_USERNAME/YOUR_REPO/issues" # User will need to update this
+"Source Code" = "https://github.com/ahmoloudi/tgju" # Assuming this is the repo, can be changed by user
+"Bug Tracker" = "https://github.com/ahmoloudi/tgju/issues" # Assuming
+
+[project.optional-dependencies]
+test = [
+    "respx>=0.20",
+    "pytest>=7.0", # A reasonable modern version
+    "pytest-asyncio>=0.18", # A reasonable modern version
+]
+
+# Configuration for Hatchling (optional, but can be useful)
+# [tool.hatch.version]
+# path = "src/tgju/__init__.py" # To read version from __init__.py
+
+# [tool.hatch.build.targets.sdist]
+# include = [
+#     "/src",
+#     "/tests",
+#     "/README.md",
+#     "/LICENSE",
+#     "/pyproject.toml"
+# ]
+
+# [tool.hatch.build.targets.wheel]
+# packages = ["src/tgju"] # Specify the package directory for the wheel
+# include = ["/src/tgju"] # Redundant if packages is set correctly for src-layout
+
+# Let's keep Hatchling config minimal for now, it's good at auto-detection.
+# The primary goal is to get [build-system] and [project] tables correct.
+# Hatchling's default behavior for src-layout should correctly find src/tgju.
+# If we want to ensure __version__ is sourced from __init__.py for hatch:
+[tool.hatch.version]
+path = "src/tgju/__init__.py"
+
+# Ensure specific files are included in sdist if not by default
+[tool.hatch.build.targets.sdist]
+include = [
+    "README.md",
+    "LICENSE",
+    "pyproject.toml",
+    "src", # Include the whole src directory
+    # "/tests", # tests are usually not included in sdist unless specified or part of manifest
+]

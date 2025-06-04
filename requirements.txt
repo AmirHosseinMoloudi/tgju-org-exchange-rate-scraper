@@ -1,0 +1,12 @@
+# Core dependency (also in pyproject.toml)
+httpx>=0.20
+
+# Test dependencies (also in pyproject.toml[project.optional-dependencies.test])
+respx>=0.20
+pytest>=7.0
+pytest-asyncio>=0.18
+
+# Build and packaging tools
+build>=0.10.0
+twine>=3.8.0
+hatchling>=1.11.0
